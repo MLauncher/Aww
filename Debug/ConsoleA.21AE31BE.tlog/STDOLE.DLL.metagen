@@ -1,0 +1,335 @@
+ImageRuntimeVersion: v1.0.3705
+Assembly stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Struct stdole.GUID: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt32 Data1 : Public
+    UInt16 Data2 : Public
+    UInt16 Data3 : Public
+    Byte[] Data4 : Public, HasFieldMarshal
+Struct stdole.DISPPARAMS: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr rgvarg : Public
+    IntPtr rgdispidNamedArgs : Public
+    UInt32 cArgs : Public
+    UInt32 cNamedArgs : Public
+Struct stdole.EXCEPINFO: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt16 wCode : Public
+    UInt16 wReserved : Public
+    System.String bstrSource : Public, HasFieldMarshal
+    System.String bstrDescription : Public, HasFieldMarshal
+    System.String bstrHelpFile : Public, HasFieldMarshal
+    UInt32 dwHelpContext : Public
+    IntPtr pvReserved : Public
+    IntPtr pfnDeferredFillIn : Public
+    Int32 scode : Public, HasFieldMarshal
+Interface stdole.IUnknown: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Interface stdole.IDispatch: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Interface stdole.IEnumVARIANT: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    Next(UInt32(In), Object&(In, HasFieldMarshal), UInt32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Skip(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Clone(IEnumerator&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct stdole.OLE_TRISTATE: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    stdole.OLE_TRISTATE Unchecked = 0 : Public, Static, Literal, HasDefault
+    stdole.OLE_TRISTATE Checked = 1 : Public, Static, Literal, HasDefault
+    stdole.OLE_TRISTATE Gray = 2 : Public, Static, Literal, HasDefault
+Interface stdole.IFont: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String Name 'get set' : 
+    System.Decimal Size 'get set' : 
+    Boolean Bold 'get set' : 
+    Boolean Italic 'get set' : 
+    Boolean Underline 'get set' : 
+    Boolean Strikethrough 'get set' : 
+    Int16 Weight 'get set' : 
+    Int16 Charset 'get set' : 
+    Int32 hFont 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Size(Decimal(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Bold(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Bold(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Italic(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Italic(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Underline(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Underline(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Strikethrough(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Strikethrough(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Weight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Weight(Int16(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Charset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Charset(Int16(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_hFont(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Clone(IFont&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsEqual(IFont(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetRatio(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddRefHfont(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ReleaseHfont(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface stdole.Font: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String Name 'get set' : 
+    System.Decimal Size 'get set' : 
+    Boolean Bold 'get set' : 
+    Boolean Italic 'get set' : 
+    Boolean Underline 'get set' : 
+    Boolean Strikethrough 'get set' : 
+    Int16 Weight 'get set' : 
+    Int16 Charset 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Size(Decimal): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Bold(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Bold(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Italic(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Italic(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Underline(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Underline(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Strikethrough(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Strikethrough(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Weight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Weight(Int16): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Charset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Charset(Int16): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface stdole.IFontDisp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String Name 'get set' : 
+    System.Decimal Size 'get set' : 
+    Boolean Bold 'get set' : 
+    Boolean Italic 'get set' : 
+    Boolean Underline 'get set' : 
+    Boolean Strikethrough 'get set' : 
+    Int16 Weight 'get set' : 
+    Int16 Charset 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Size(Decimal): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Bold(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Bold(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Italic(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Italic(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Underline(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Underline(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Strikethrough(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Strikethrough(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Weight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Weight(Int16): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Charset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Charset(Int16): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class stdole.StdFontClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    stdole.Font
+    stdole.StdFont
+    stdole.FontEvents_Event
+    stdole.IFont
+  Properties:
+    System.String Name 'get set' : 
+    System.Decimal Size 'get set' : 
+    Boolean Bold 'get set' : 
+    Boolean Italic 'get set' : 
+    Boolean Underline 'get set' : 
+    Boolean Strikethrough 'get set' : 
+    Int16 Weight 'get set' : 
+    Int16 Charset 'get set' : 
+    System.String IFont_Name 'get set' : 
+    System.Decimal IFont_Size 'get set' : 
+    Boolean IFont_Bold 'get set' : 
+    Boolean IFont_Italic 'get set' : 
+    Boolean IFont_Underline 'get set' : 
+    Boolean IFont_Strikethrough 'get set' : 
+    Int16 IFont_Weight 'get set' : 
+    Int16 IFont_Charset 'get set' : 
+    Int32 hFont 'get ' : 
+  Events:
+    stdole.FontEvents_FontChangedEventHandler FontChanged: 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Name(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Size(Decimal): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Bold(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Bold(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Italic(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Italic(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Underline(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Underline(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Strikethrough(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Strikethrough(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Weight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Weight(Int16): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Charset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Charset(Int16): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Size(Decimal(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Bold(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Bold(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Italic(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Italic(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Underline(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Underline(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Strikethrough(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Strikethrough(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Weight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Weight(Int16(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_get_Charset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IFont_set_Charset(Int16(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_hFont(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Clone(IFont&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsEqual(IFont(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetRatio(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddRefHfont(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ReleaseHfont(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_FontChanged(FontEvents_FontChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_FontChanged(FontEvents_FontChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface stdole.FontEvents_Event: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Events:
+    stdole.FontEvents_FontChangedEventHandler FontChanged: 
+  Methods:
+    add_FontChanged(FontEvents_FontChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_FontChanged(FontEvents_FontChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class stdole.FontEvents_FontChangedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual
+Interface stdole.StdFont: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    stdole.Font
+    stdole.FontEvents_Event
+Interface stdole.IPicture: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 Handle 'get ' : 
+    Int32 hPal 'get set' : 
+    Int16 Type 'get ' : 
+    Int32 Width 'get ' : 
+    Int32 Height 'get ' : 
+    Int32 CurDC 'get ' : 
+    Boolean KeepOriginalFormat 'get set' : 
+    Int32 Attributes 'get ' : 
+  Methods:
+    get_Handle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_hPal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Height(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Render(Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), IntPtr(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_hPal(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurDC(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SelectPicture(Int32(In), Int32&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_KeepOriginalFormat(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_KeepOriginalFormat(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    PictureChanged(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SaveAsFile(IntPtr(In), Boolean(In), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Attributes(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SetHdc(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface stdole.Picture: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 Handle 'get ' : 
+    Int32 hPal 'get set' : 
+    Int16 Type 'get ' : 
+    Int32 Width 'get ' : 
+    Int32 Height 'get ' : 
+  Methods:
+    get_Handle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_hPal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_hPal(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Height(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Render(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface stdole.IPictureDisp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 Handle 'get ' : 
+    Int32 hPal 'get set' : 
+    Int16 Type 'get ' : 
+    Int32 Width 'get ' : 
+    Int32 Height 'get ' : 
+  Methods:
+    get_Handle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_hPal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_hPal(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Height(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Render(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class stdole.StdPictureClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    stdole.Picture
+    stdole.StdPicture
+    stdole.IPicture
+  Properties:
+    Int32 Handle 'get ' : 
+    Int32 hPal 'get set' : 
+    Int16 Type 'get ' : 
+    Int32 Width 'get ' : 
+    Int32 Height 'get ' : 
+    Int32 IPicture_Handle 'get ' : 
+    Int32 IPicture_hPal 'get set' : 
+    Int16 IPicture_Type 'get ' : 
+    Int32 IPicture_Width 'get ' : 
+    Int32 IPicture_Height 'get ' : 
+    Int32 CurDC 'get ' : 
+    Boolean KeepOriginalFormat 'get set' : 
+    Int32 Attributes 'get ' : 
+  Methods:
+    get_Handle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_hPal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_hPal(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Height(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Render(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IPicture_get_Handle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IPicture_get_hPal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IPicture_get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IPicture_get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IPicture_get_Height(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IPicture_Render(Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), Int32(In), IntPtr(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IPicture_set_hPal(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CurDC(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SelectPicture(Int32(In), Int32&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_KeepOriginalFormat(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_KeepOriginalFormat(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    PictureChanged(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SaveAsFile(IntPtr(In), Boolean(In), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Attributes(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SetHdc(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface stdole.StdPicture: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    stdole.Picture
+Struct stdole.LoadPictureConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    stdole.LoadPictureConstants Default = 0 : Public, Static, Literal, HasDefault
+    stdole.LoadPictureConstants Monochrome = 1 : Public, Static, Literal, HasDefault
+    stdole.LoadPictureConstants VgaColor = 2 : Public, Static, Literal, HasDefault
+    stdole.LoadPictureConstants Color = 4 : Public, Static, Literal, HasDefault
+Interface stdole.FontEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    FontChanged(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface stdole.IFontEventsDisp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    FontChanged(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
