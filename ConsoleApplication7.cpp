@@ -9,7 +9,7 @@ using namespace System::Windows::Forms;
 int main(array<System::String ^> ^args)
 {
     Console::WriteLine(L"Hello World");
-
+	///Random comment
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	ConsoleApplication7::MyForm form;
